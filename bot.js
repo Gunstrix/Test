@@ -5,7 +5,6 @@ const prefix = "!"
 bot.on("message", message => {
   const args = message.content.slice(prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
-  const sender = message.author();
   if(message.channel.type === "dm") return;
   if (!message.content.startsWith(prefix)) return;
   
